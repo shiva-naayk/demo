@@ -1,12 +1,15 @@
 .mat-card{
 	background:transparent;
 }
+.mat-card-header-text{
+    margin: 0px 0px !important;
+}
 .step1row{
 
 width: 100%; 	
 }
 .signin{
-	color:red !important;
+	color:#b30818 !important;
 }
 .subtitle{
 font-weight: 700; 
@@ -25,26 +28,35 @@ font-weight: 700;
 .field_label{
 
 	width: 100%; 
+  margin-top: 20px;
 }
 .form-control{
-
+font-size: 14px;
 	border:none;
-	font-weight: 700;
+	font-weight: 600;
+      float: left;
+    width: 100%;
 	
 }
 ::placeholder {
     color: #0707073b !important;
+    font-size: 14px !important; 
 }
 .form-control:focus{
       box-shadow: 1px 8px 10px #0000001a;
     border-radius: 14px;
-    border: 1px solid #00000014;
+    
+
 
 }
+
+
 .error-message{
-   padding:10px;
-   padding-left: 2%; 
-   color: red;
+     padding: 10px;
+    padding-left: 2%;
+    color: #4950574f;
+    font-weight: 700;
+    font-style: italic;
 
 }
 h5.text-center{
@@ -54,4 +66,32 @@ h5.text-center{
 text-align: center;
 padding-top: 14px; 	
 font-size: 13px; 
+color:rgba(0, 0, 0, 0.77);
 }
+ input.submit{
+    color: white;
+    background: #b30818;
+    padding-left: 15%;
+    padding-right: 15%;
+    height: 42px;
+    border-radius: 15px;
+    border: none;
+  }
+  div.submitbutton{
+  text-align: center;
+    margin-top: 50px;
+ }
+ .bottom_content{
+  margin-top: 50px;
+  font-size: 12px;
+  line-height: 22px;
+ }
+ .extra_input{
+color: #b30818;
+    margin-left: 5px;
+    margin-right: 5px;
+ }
+ .field_sub_level{
+  width: 48%; 
+
+ }

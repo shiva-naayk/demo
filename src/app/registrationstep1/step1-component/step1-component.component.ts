@@ -6,10 +6,11 @@ import { FormGroup, FormControl,Validators  } from '@angular/forms';
   styleUrls: ['./step1-component.component.css']
 })
 export class Step1ComponentComponent implements OnInit {
-  formheader= {
+  formheader = {
   title:"Good Choice! Lest's get started",
   content:'You have been redirected to the appropriate juridiction, Aleady have a Account?You can',
-  link:'#'
+  link:'#',
+  bottomcontent:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries'
  
   }
 
@@ -33,6 +34,14 @@ export class Step1ComponentComponent implements OnInit {
 'password': [
   { type: 'required', message: 'Password is required' },
   { type: 'pattern', message: 'Password must be at least 8 characters long with a capital letter' }
+],
+'areacode1': [
+  { type: 'required', message: 'Areacode 1 is required' },
+ 
+],
+'areacode2': [
+  { type: 'required', message: 'Areacode 2  is required' },
+ 
 ]
 }
 
@@ -46,6 +55,9 @@ export class Step1ComponentComponent implements OnInit {
       Validators.maxLength(15),
       Validators.pattern('[0-9]+') ]), 
       country:new  FormControl(''),
+      areacode1: new FormControl('',Validators.required),
+      areacode2: new FormControl('',Validators.required),
+
 
   });
 

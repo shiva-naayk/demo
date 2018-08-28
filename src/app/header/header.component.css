@@ -2,6 +2,20 @@
 
 float:left;	
 }
+mat-nav-list.mat-nav-list {
+    padding-top: 0px;
+}
+mat-card-header.mat-card-header {
+    padding: 0px 60px;
+}
+a.listitem.mat-list-item {
+  padding: 0px 18px !important;
+    height: 80px !important;
+    width: 91px !important;
+}
+.header div{
+    margin: 0px 0px !important;
+}
 .mat-header-cell {
    display:flex;
    justify-content:flex-end;
@@ -31,3 +45,12 @@ float:left;
   .main-nav{
     float: right;
   }
+  li:nth-child(1)  a{
+  background: #b30818;
+    color: #fff !important;
+
+  }
+ mat-card.header.mat-card{
+box-shadow: none !important;
+
+}

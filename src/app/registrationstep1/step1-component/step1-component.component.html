@@ -54,6 +54,35 @@
                               </div>
                             </label>
 
+                              <label  class="field_label field_sub_level">
+                             
+                              <input type="text"  class="form-control areafield" formControlName="areacode1"  placeholder="Area Code..."/>
+
+                               <div *ngFor="let validation of account_validation_messages.areacode1">
+                                
+                                <div class="error-message" *ngIf="step1Form.get('areacode1').hasError(validation.type) && (step1Form.get('areacode1').dirty || step1Form.get('areacode1').touched)">{{validation.message}}</div>
+                              </div>
+                            </label> 
+                              <label  class="field_label field_sub_level">
+                             
+                              <input type="text"  class="form-control areafield" formControlName="areacode2" placeholder="Area Code..."/>
+
+                               <div *ngFor="let validation of account_validation_messages.areacode2">
+                                
+                                <div class="error-message" *ngIf="step1Form.get('areacode2').hasError(validation.type) && (step1Form.get('areacode2').dirty || step1Form.get('areacode2').touched)">{{validation.message}}</div>
+                              </div>
+                            </label> 
+                             <label  class="field_label">
+                             
+                             <select class="form-control">
+                                <option>Select Brand</option>
+                                <option>Cysec</option>
+                                <option>Vanuatu</option>
+                                <option>Labuan</option>
+                             </select>
+                               
+                            </label>   
+
                              <label  class="field_label">
                              
                               <input type="text"  class="form-control" formControlName="phone" placeholder="Phone"/>
@@ -76,8 +105,17 @@
                                 
                                 <div class="error-message" *ngIf="step1Form.get('password').hasError(validation.type) && (step1Form.get('password').dirty || step1Form.get('password').touched)">{{validation.message}}</div>
                               </div>
-                            </label>   
+                            </label> 
 
+                            <div class="submitbutton">
+                            <input type="submit"  class="submit" value="Submit">  
+                            </div>
+                            <div class="bottom_content">
+                             <strong>By Clicking this</strong> {{ formheader.bottomcontent  }}
+                               It was popularised in the 1960s <a class="extra_input"  href="javascript:void(0)">link1content</a>,<a class="extra_input" href="javascript:void(0)">link</a>with the release of<a class="extra_input"  href="javascript:void(0)">link3content</a> Letraset sheets containing Lorem Ipsum passages.
+                             
+                             </div> 
+                    
                       </form>
                    </mat-card-content>
 
