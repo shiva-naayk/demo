@@ -1,0 +1,22 @@
+<mat-card class='header'>
+ 	
+  	<mat-card-header>
+
+  		<div class="row">
+  			<div class="col-md-6 column">
+               <img   src='{{logoimage.src}}' /> 
+            </div> 
+          <div class="col-md-6 col-xs-12 col-sm-12 column">
+		      <mat-nav-list  >
+		      <ul  class="main-nav"> 	
+		      <li  class="menuitems"   *ngFor="let i of folders">	
+		      <a mat-list-item class="listitem" >{{i.name }}</a>
+		       </li>
+		      </ul>
+		    </mat-nav-list>
+         </div>
+        </div>
+ 	</mat-card-header>	
+
+
+</mat-card>

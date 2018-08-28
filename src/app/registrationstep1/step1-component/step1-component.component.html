@@ -1,0 +1,92 @@
+
+ 	
+  	  
+
+  		<div class="row step1row">
+  			<div class="col-md-3 column">
+             
+            </div> 
+          <div class="col-md-6 col-xs-12 col-sm-12 column">
+            
+
+            <mat-card>              
+            
+                    <mat-card-header>
+
+                       <mat-card-title><h5 class="text-center">{{ formheader.title }}</h5></mat-card-title>
+                        <mat-card-subtitle class='subtitle'>{{ formheader.content }}<a class="signin"  > sign in here </a></mat-card-subtitle>
+
+
+                      
+                   </mat-card-header>  
+
+
+                   <mat-card-content>
+                     
+                      <form [formGroup]="step1Form"    class='form-group'> 
+  
+                            <label class="field_label">
+                            
+                              <input type="text" class="form-control" formControlName="firstName" placeholder="FirstName"/>
+
+                               <div *ngFor="let validation of account_validation_messages.firstName">
+                                
+                                <div class="error-message" *ngIf="step1Form.get('firstName').hasError(validation.type) && (step1Form.get('firstName').dirty || step1Form.get('firstName').touched)">{{validation.message}}</div>
+                              </div>
+
+                            </label>
+
+                            <label  class="field_label">
+                             
+                              <input  type="text" class="form-control" formControlName="lastName" placeholder="LastName"/>
+
+                               <div *ngFor="let validation of account_validation_messages.lastName">
+                                
+                                <div class="error-message" *ngIf="step1Form.get('lastName').hasError(validation.type) && (step1Form.get('lastName').dirty || step1Form.get('lastName').touched)">{{validation.message}}</div>
+                              </div>
+                            </label>
+                             <label  class="field_label">
+                             
+                              <input type="text" class="form-control" formControlName="email" placeholder="Email"/>
+                              <div *ngFor="let validation of account_validation_messages.email">
+                                
+                                <div class="error-message" *ngIf="step1Form.get('email').hasError(validation.type) && (step1Form.get('email').dirty || step1Form.get('email').touched)">{{validation.message}}</div>
+                              </div>
+                            </label>
+
+                             <label  class="field_label">
+                             
+                              <input type="text"  class="form-control" formControlName="phone" placeholder="Phone"/>
+
+                               <div *ngFor="let validation of account_validation_messages.phone">
+                                
+                                <div class="error-message" *ngIf="step1Form.get('phone').hasError(validation.type) && (step1Form.get('phone').dirty || step1Form.get('phone').touched)">{{validation.message}}</div>
+                              </div>
+                            </label>   
+                             <label  class="field_label">
+                             
+                              <input type="text" class="form-control" formControlName="country" placeholder="Country"/>
+                            </label>
+                           
+                            <label  class="field_label">
+                             
+                              <input type="text"  class="form-control" formControlName="password" placeholder="Password"/>
+
+                               <div *ngFor="let validation of account_validation_messages.password">
+                                
+                                <div class="error-message" *ngIf="step1Form.get('password').hasError(validation.type) && (step1Form.get('password').dirty || step1Form.get('password').touched)">{{validation.message}}</div>
+                              </div>
+                            </label>   
+
+                      </form>
+                   </mat-card-content>
+
+             </mat-card>
+		     
+         </div>
+          <div class="col-md-3 column">
+             
+            </div> 
+        </div>
+ 
+
