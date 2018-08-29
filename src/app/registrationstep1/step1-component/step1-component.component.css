@@ -36,25 +36,31 @@ font-size: 14px;
 	font-weight: 600;
       float: left;
     width: 100%;
+     padding: 25px 15px !important;
+         background: #cccccc2e;
+    border-radius: 20px;
+    -webkit-box-shadow: inset 0 0px 0px rgba(0,0,0,.075);
+    box-shadow: inset 0 0px 0px rgba(0,0,0,.075);
+	
+}
+.select_box{
+
+   padding: 10px 10px !important;
+    height: 50px;
+      
 	
 }
 ::placeholder {
     color: #0707073b !important;
     font-size: 14px !important; 
 }
-.form-control:focus{
-      box-shadow: 1px 8px 10px #0000001a;
-    border-radius: 14px;
-    
 
-
-}
 
 
 .error-message{
      padding: 10px;
     padding-left: 2%;
-    color: #4950574f;
+    color: #b70014;
     font-weight: 700;
     font-style: italic;
 
@@ -65,15 +71,15 @@ h5.text-center{
 .subtitle{
 text-align: center;
 padding-top: 14px; 	
-font-size: 13px; 
-color:rgba(0, 0, 0, 0.77);
+font-size: 14px; 
+color:rgba(0, 0, 0, 0.55);
 }
  input.submit{
     color: white;
-    background: #b30818;
+    background: #b70014;
     padding-left: 15%;
     padding-right: 15%;
-    height: 42px;
+    height: 50px;
     border-radius: 15px;
     border: none;
   }
@@ -87,11 +93,23 @@ color:rgba(0, 0, 0, 0.77);
   line-height: 22px;
  }
  .extra_input{
-color: #b30818;
+color: #b70014;
     margin-left: 5px;
     margin-right: 5px;
  }
  .field_sub_level{
-  width: 48%; 
+  width: 33%; 
+  margin-right: 15px;
 
  }
+ .field_sub_level1{
+  width: 64%; 
+
+ }
+ .form-control[_ngcontent-c2]:focus {
+    box-shadow: 0px 2px 14px 2px #0000001a;
+    border-radius: 14px;
+    padding: 25px 15px;
+}
+.title_font{font-weight: 700;}
+.form_class1{float: left;width: 100%;}

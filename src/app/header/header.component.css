@@ -38,7 +38,7 @@ a.listitem.mat-list-item {
     padding-top: 1%; 
   }
    .listitem:hover {
-    background: #b30818;
+    background: #b70014;
     color: #fff !important;
 
   }
@@ -46,7 +46,7 @@ a.listitem.mat-list-item {
     float: right;
   }
   li:nth-child(1)  a{
-  background: #b30818;
+  background: #b70014;
     color: #fff !important;
 
   }
@@ -54,3 +54,38 @@ a.listitem.mat-list-item {
 box-shadow: none !important;
 
 }
+.navbar-inverse {
+    background-color: #fff;
+    border-color: #ccc;
+    border-bottom: none;
+    box-shadow: 0px 0px 18px 9px #0000001a;
+}
+.example3 .navbar-brand {
+  height: 80px;
+}
+
+.example3 .nav >li >a {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.example3 .navbar-toggle {
+  padding: 10px;
+  margin: 25px 15px 25px 0;
+}
+.example3[_ngcontent-c1] .nav[_ngcontent-c1] > li[_ngcontent-c1] > a[_ngcontent-c1] {
+   padding-top: 49px;
+    padding-bottom: 46px;
+    padding-left: 45px;
+    padding-right: 45px;
+}
+.header[_ngcontent-c1] div[_ngcontent-c1] {
+    margin: auto !important;
+}
+.navbar {min-height: 115px;}
+.navbar-right li:hover{background: #000;color:#fff;}
+.navbar-toggle {
+    background-color: #b71813;}
+
+
+
+
