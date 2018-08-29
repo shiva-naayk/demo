@@ -32,13 +32,9 @@
 				</div>
 				<div id="navbar3" class="navbar-collapse collapse">
 
-
 					<ul class="nav navbar-nav navbar-right">
-						<li class="active">
-							<a href="#">EU</a>
-						</li>
-						<li>
-							<a href="#">Global</a>
+						<li *ngFor="let i of folders">
+							<a href="#" mat-list-item class="">{{i.name }}</a>
 						</li>
 					</ul>
 				</div>
