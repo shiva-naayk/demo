@@ -1,9 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { Registrationstep1Module } from './registrationstep1/registrationstep1.module';
-
+import  { Step1ComponentComponent } from './registrationstep1/step1-component/step1-component.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 import 'hammerjs/hammer';
+import {UserService} from './user.service';
 
 import {
   MatAutocompleteModule,
@@ -48,9 +51,13 @@ import { FooterComponent } from './footer/footer.component';
     AppComponent,
     HeaderComponent,
     FooterComponent,
+    Step1ComponentComponent,
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    HttpModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule ,
     MatAutocompleteModule,
     MatButtonModule,
@@ -81,7 +88,7 @@ import { FooterComponent } from './footer/footer.component';
     MatTooltipModule,
     Registrationstep1Module
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import  { Step1ComponentComponent } from './step1-component/step1-component.component'; 
+// import  { Step1ComponentComponent } from './step1-component/step1-component.component'; 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -70,8 +70,8 @@ import {
     ReactiveFormsModule,
     BrowserModule
   ],
-  declarations: [Step1ComponentComponent],
-   exports: [Step1ComponentComponent]
+  declarations: [],
+   exports: []
  
 })
 export class Registrationstep1Module { 

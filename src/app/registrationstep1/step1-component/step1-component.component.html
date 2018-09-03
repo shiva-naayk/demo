@@ -8,124 +8,85 @@
       <mat-card-header>
 
         <mat-card-title>
-          <h3 class="text-center title_font">{{ formheader.title }}</h3>
+          <h3 class="text-center title_font">{{ title }}</h3>
         </mat-card-title>
-        <mat-card-subtitle class='subtitle'>{{ formheader.content }}
+        <mat-card-subtitle class='subtitle'>{{ content }}
           <a class="signin"> sign in here </a>
         </mat-card-subtitle>
-
-
-
       </mat-card-header>
-
-
       <mat-card-content>
 
-        <form [formGroup]="step1Form" class='form-group'>
+        <form [formGroup]="userAddForm" class='form-group' (ngSubmit)="step1User($event)">
           <div class="form-group form_class1">
 
             <label class="col-md-12 col-sm-12">
 
-              <input type="text" class="form-control" formControlName="firstName" placeholder="FirstName" />
-
-              <div *ngFor="let validation of account_validation_messages.firstName">
-
-                <div class="error-message" *ngIf="step1Form.get('firstName').hasError(validation.type) && (step1Form.get('firstName').dirty || step1Form.get('firstName').touched)">{{validation.message}}</div>
-              </div>
-
+              <input type="text" class="form-control" name="firstName" id="firstName" formControlName="firstName" placeholder="FirstName" />
             </label>
           </div>
           <div class="form-group form_class1">
             <label class="col-md-12 col-sm-12">
 
-              <input type="text" class="form-control" formControlName="lastName" placeholder="LastName" />
-
-              <div *ngFor="let validation of account_validation_messages.lastName">
-
-                <div class="error-message" *ngIf="step1Form.get('lastName').hasError(validation.type) && (step1Form.get('lastName').dirty || step1Form.get('lastName').touched)">{{validation.message}}</div>
-              </div>
+              <input type="text" class="form-control" name="lastName" id="lastName" formControlName="lastName" placeholder="LastName" />
             </label>
           </div>
           <div class="form-group form_class1">
             <label class="col-md-12 col-sm-12">
 
-              <input type="text" class="form-control" formControlName="email" placeholder="Email" />
-              <div *ngFor="let validation of account_validation_messages.email">
-
-                <div class="error-message" *ngIf="step1Form.get('email').hasError(validation.type) && (step1Form.get('email').dirty || step1Form.get('email').touched)">{{validation.message}}</div>
-              </div>
+              <input type="text" class="form-control" name="email" id="email" formControlName="email" placeholder="Email" />
             </label>
           </div>
           <div class="form-group form_class1">
             <label class="col-md-3 col-sm-3">
 
-              <input type="text" class="form-control areafield" formControlName="areacode1" placeholder="Area Code..." />
+              <input type="text" class="form-control areafield" name="areacode1" id="areacode1" formControlName="areacode1" placeholder="Area Code..." />
 
-              <div *ngFor="let validation of account_validation_messages.areacode1">
-
-                <div class="error-message" *ngIf="step1Form.get('areacode1').hasError(validation.type) && (step1Form.get('areacode1').dirty || step1Form.get('areacode1').touched)">{{validation.message}}</div>
-              </div>
             </label>
 
             <label class="col-md-9 col-sm-9">
 
-              <input type="text" class="form-control areafield" formControlName="areacode2" placeholder="Area Code..." />
+              <input type="text" class="form-control areafield" name="areacode2" id="areacode2" formControlName="areacode2" placeholder="Area Code..." />
 
-              <div *ngFor="let validation of account_validation_messages.areacode2">
-
-                <div class="error-message" *ngIf="step1Form.get('areacode2').hasError(validation.type) && (step1Form.get('areacode2').dirty || step1Form.get('areacode2').touched)">{{validation.message}}</div>
-              </div>
             </label>
           </div>
           <div class="form-group form_class1">
             <label class="col-md-12 col-sm-12">
-
-              <select class="form-control select_box">
-                <option value="Select Brand">Select Brand</option>
+              <select class="form-control select_box" name="brand" id="brand" formControlName="brand">
+                <option value="Select Brand" disabled>Select Brand</option>
                 <option value="Cysec">Cysec</option>
                 <option value="Vanuatu">Vanuatu</option>
                 <option value="Labuan">Labuan</option>
               </select>
-
             </label>
           </div>
           <div class="form-group form_class1">
             <label class="col-md-12 col-sm-12">
 
-              <input type="text" class="form-control" formControlName="phone" placeholder="Phone" />
-
-              <div *ngFor="let validation of account_validation_messages.phone">
-
-                <div class="error-message" *ngIf="step1Form.get('phone').hasError(validation.type) && (step1Form.get('phone').dirty || step1Form.get('phone').touched)">{{validation.message}}</div>
-              </div>
+              <input type="text" class="form-control" name="phone" id="phone" formControlName="phone" placeholder="Phone" />      
             </label>
           </div>
           <div class="form-group form_class1">
             <label class="col-md-12 col-sm-12">
 
-              <input type="text" class="form-control" formControlName="country" placeholder="Country" />
+              <input type="text" class="form-control" name="country" id="country" formControlName="country" placeholder="Country" />
             </label>
           </div>
           <div class="form-group form_class1">
 
             <label class="col-md-12 col-sm-12">
 
-              <input type="text" class="form-control" formControlName="password" placeholder="Password" />
-
-              <div *ngFor="let validation of account_validation_messages.password">
-
-                <div class="error-message" *ngIf="step1Form.get('password').hasError(validation.type) && (step1Form.get('password').dirty || step1Form.get('password').touched)">{{validation.message}}</div>
-              </div>
+            <input type="text" class="form-control" name="password" id="password" formControlName="password" placeholder="Password" />      
             </label>
           </div>
           <div class="form-group form_class1">
             <div class="submitbutton">
-              <input type="submit" class="submit" value="SUBMIT">
+              <input type="submit" class="submit" [disabled]="!userAddForm.valid" value="SUBMIT">
+           <!--    <button  type="submit" class="submit" [disabled]="!userAddForm.valid">SUBMIT</button> -->
             </div>
           </div>
           <div class="clearfix"></div>
           <div class="bottom_content">
-            <strong>By Clicking this</strong> {{ formheader.bottomcontent }} It was popularised in the 1960s
+            <strong>By Clicking this</strong> {{ bottomcontent }} It was popularised in the 1960s
             <a class="extra_input" href="javascript:void(0)">link1content</a>,
             <a class="extra_input" href="javascript:void(0)">link</a>with the release of
             <a class="extra_input" href="javascript:void(0)">link3content</a> Letraset sheets containing Lorem Ipsum passages.
